@@ -9,6 +9,8 @@ import math
 
 
 
+
+
 """
 python3 stats.py 3 1 4 1 5
 Count: 5

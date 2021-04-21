@@ -12,6 +12,8 @@ for i in range(1,n+1):
     s = s+i
     x = x*i
 print(n,s,x)
+
+
 """
 python3 sumfac.py
 5 15 120

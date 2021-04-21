@@ -9,6 +9,7 @@ Aminoacids = "ARNDCEQGHILKMFPSTWYV"
 for i in Aminoacids:
     print(i)
     
+
 """
 python3 aa_pairs.py
 A C

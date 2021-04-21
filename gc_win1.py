@@ -12,6 +12,7 @@ for frame in range(w+1):
         print(i, seq[i:i+10])
 
 
+
 """
 python3 gc_win.py
 0 ACGACGCAGGA 0.6364

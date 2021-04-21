@@ -20,6 +20,7 @@ for i in range(len(dna)-1, -1, -1) :
 
 print(antidna)
 
+
 """
 python3 anti.py
 TTTTTTTTTTTCAGT

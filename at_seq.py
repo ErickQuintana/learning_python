@@ -44,6 +44,7 @@ for i in range(randdna):
 print(len(seq3),seq3, "sequence 3")
 # I dont know why i only get a 25 nt long sequence
 #First code
+
 """
 python3 at_seq.py
 30 0.6666666666666666 ATTACCGTAATCTACTATTAAGTCACAACC

@@ -11,7 +11,8 @@ for i in range(len(dna)):
         gc_content += 1 
 print(f'{gc_content/len(dna):.2f}')
 
-        
+   
+    
     
     
 

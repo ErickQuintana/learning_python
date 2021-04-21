@@ -10,6 +10,7 @@ for i in range(len(dna)):
         print(i,dna[i])
 
 
+
 """
 python3 frame.py
 0 0 A
