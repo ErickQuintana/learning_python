@@ -11,7 +11,6 @@ for i in range(1, 101):
     else:print(i)
 
 
-
 """
 python3 fizzbuzz.py
 1

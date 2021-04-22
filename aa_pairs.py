@@ -5,9 +5,14 @@
 # Skip AA, CC etc.
 # Also print out how many combinations there are
 
-Aminoacids = "ARNDCEQGHILKMFPSTWYV"
-for i in Aminoacids:
-    print(i)
+aa = "ARNDCEQGHILKMFPSTWYV"
+n = 0
+for i in range(0,len(aa)):
+    for j in range(i+1,len(aa)): 
+        print(aa[i],aa[j])
+        n += 1
+print(n)
+        
     
 
 """

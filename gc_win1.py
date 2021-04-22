@@ -7,11 +7,16 @@
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
-for frame in range(w+1):
-    for i in range(frame,len(seq), w+1):
-        print(i, seq[i:i+10])
-
-
+#for frame in range(w+1):
+    #for i in range(frame,len(seq), w+1):
+        #print(i, seq[i:i+10])
+for i in range(len(seq)-w+1):
+    gc_content= 0
+    window = seq[i:i+w]
+    for nt in window:
+        if nt == "G" or nt == "C": 
+            gc_content += 1
+    print(i,window,gc_content/w)
 
 """
 python3 gc_win.py

@@ -10,8 +10,20 @@
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
+gc_content = 0
+for nt in seq[0:w]:
+    if nt == "G" or nt == "C":
+        gc_content += 1
+print(0,seq[0:w], gc_content/w)
 
-
+for i in range(1,len(seq)-w+1):
+    off = seq[i-1]
+    on = seq[i+w-1]
+    if off == "G" or off== "C":
+        gc_content -= 1
+    if on == "G" or on == "C":
+        gc_content += 1
+    print(i,seq[i:i+w], gc_content/w)
 """
 python3 gc_win2.py
 0 ACGACGCAGGA 0.6364

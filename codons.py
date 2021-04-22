@@ -8,5 +8,3 @@ dna = 'ATAGCGAATATCTCTCATGAGAGGGAA'
 for i in range(0, len(dna),3):    
         print(i, dna[i:i+3])
 
-
-

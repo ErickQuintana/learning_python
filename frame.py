@@ -7,8 +7,11 @@
 dna = 'ATGGCCTTT'
 
 for i in range(len(dna)):
-        print(i,dna[i])
+    print(i, i%3, dna[i])
 
+for i in range(0,len(dna),3):
+    for j in range(3):
+        print(i+j,j,dna[i+j])
 
 
 """
