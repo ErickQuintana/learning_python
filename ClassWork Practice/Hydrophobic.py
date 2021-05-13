@@ -102,6 +102,7 @@ with open(sys.argv[1]) as fp:
 w = 11
 # Look for hydrophobic regions in all sequences
 for id,seq in zip(ids,proteins):
-    print('For the sequence',id,len(seq))
+    print(id,len(seq))
     transmembrane(seq)
+    print()
 
