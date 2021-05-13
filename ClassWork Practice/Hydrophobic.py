@@ -49,9 +49,17 @@ peptide_length = 30
 
 def Signal_peptide(seq):
     w = 8
+    sp = False
     for i in range(len(seq)-len(seq)+peptide_length-w):
-        s = kd(seq[i:i+w])
-    return s
+        aa = seq[i:i+w]
+        s =kd(seq[i:i+w])
+        if s > 2.5 :
+            sp = True
+            #print('signal peptide',aa,s, at wind)
+    #print('signal peptide?',boon)
+    return sp
+        
+        
     
 
 
@@ -59,13 +67,17 @@ def Signal_peptide(seq):
 
 def hydrophobic(seq):
     w = 11
+    hydr = False
     for i in range(peptide_length,len(seq)-w):
         int = kd(seq[i:i+w])
-    return int
+        aa = seq[i:i+w]
+        if int > 2.0:
+            hydr = True
+    return hydr
 
 def transmembrane(seq):
     hydrophobic(seq)
-    if Signal_peptide(seq) > 2.5 and hydrophobic(seq) > 2:
+    if Signal_peptide(seq) == True and hydrophobic(seq) == True:
         print('Posible transmemebrane protein')
 
 
@@ -90,5 +102,6 @@ with open(sys.argv[1]) as fp:
 w = 11
 # Look for hydrophobic regions in all sequences
 for id,seq in zip(ids,proteins):
-    print(transmembrane(seq),id,len(seq))
+    print('For the sequence',id,len(seq))
+    transmembrane(seq)
 
