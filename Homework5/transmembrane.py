@@ -64,7 +64,7 @@ peptide_length = 30
 def Signal_peptide(seq):
     w = 8
     sp = False
-    for i in range(len(seq)-len(seq)+peptide_length-w):
+    for i in range(len(seq)-len(seq)+peptide_length-w+1):
         aa = seq[i:i+w]
         int =kd(seq[i:i+w])
         if int > 2.5 :
@@ -80,7 +80,7 @@ def Signal_peptide(seq):
 def hydrophobic(seq):
     w = 11
     hydr = False
-    for i in range(peptide_length,len(seq)-w):
+    for i in range(peptide_length,len(seq)-w+1):
         int = kd(seq[i:i+w])
         aa = seq[i:i+w]
         if int > 2.0:

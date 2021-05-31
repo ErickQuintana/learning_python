@@ -59,14 +59,14 @@ def Signal_peptide(seq):
     #print('signal peptide?',boon)
     return sp
         
-        
     
 
 
 
 
 def hydrophobic(seq):
-    w = 11
+    w1 = 11
+    w2 = 8
     hydr = False
     for i in range(peptide_length,len(seq)-w):
         int = kd(seq[i:i+w])
@@ -77,7 +77,7 @@ def hydrophobic(seq):
 
 def transmembrane(seq):
     hydrophobic(seq)
-    if Signal_peptide(seq) == True and hydrophobic(seq) == True:
+    if Signal_peptide(seq)  and hydrophobic(seq) :
         print('Posible transmemebrane protein')
 
 
