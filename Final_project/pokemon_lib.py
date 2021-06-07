@@ -17,22 +17,6 @@ def damage(atk_poke,move,df_poke):
     
     
     
-
-
-
-"""
-move = random.choice(moveset)
-if atk['type'] == move['type']:
-    x = 2
-else:
-    x = 1
-"""
-
-    
-    
-    
-
-
 """
  damamge =(((2*lvl)/(5+2))*B*C)/D)/50)+2)*X)*Y/10)*Z)/255
 
